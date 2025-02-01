@@ -5,6 +5,12 @@ name = "pypi"
 
 [packages]
 datasets = "*"
+tiktoken = "*"
+pinecone-client = "*"
+openai = "*"
+pypdf = "*"
+langchain = "*"
+python-dotenv = "*"
 
 [dev-packages]
 ipykernel = "*"
