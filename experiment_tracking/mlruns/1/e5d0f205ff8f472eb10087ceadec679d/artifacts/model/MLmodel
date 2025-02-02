@@ -1,0 +1,23 @@
+artifact_path: model
+flavors:
+  openai:
+    code: null
+    data: model.yaml
+    openai_version: 1.61.0
+  python_function:
+    data: model.yaml
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.openai
+    python_version: 3.12.3
+is_signature_from_type_hint: false
+mlflow_version: 2.20.1
+model_uuid: 3f44fd8bc6364124a5caeda6f560dd72
+run_id: e5d0f205ff8f472eb10087ceadec679d
+signature:
+  inputs: '[{"type": "string", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: '[{"name": "batch_size", "default": 1024, "shape": null, "type": "long"}]'
+type_hint_from_example: false
+utc_time_created: '2025-02-02 23:48:03.734167'
