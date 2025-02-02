@@ -5,3 +5,6 @@ pypdf
 openai
 langchain
 python-dotenv
+transformers
+mlflow
+faiss-cpu

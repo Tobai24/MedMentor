@@ -11,6 +11,9 @@ openai = "*"
 pypdf = "*"
 langchain = "*"
 python-dotenv = "*"
+mlflow = "*"
+transformers = "*"
+faiss-cpu = "*"
 
 [dev-packages]
 ipykernel = "*"
