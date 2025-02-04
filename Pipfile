@@ -15,6 +15,7 @@ mlflow = "*"
 transformers = "*"
 faiss-cpu = "*"
 apache-airflow = "==2.10.4"
+pytest = "*"
 
 [dev-packages]
 ipykernel = "*"

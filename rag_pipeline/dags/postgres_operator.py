@@ -10,7 +10,7 @@ default_args = {
 }
 
 with DAG(
-    dag_id='dag_with_postgres_operator_v5',
+    dag_id='dag_with_postgres_operator_v9',
     default_args=default_args,
     start_date=days_ago(1),  
     schedule='0 0 * * *',  

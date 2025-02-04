@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/f2b48d801d684a9783972e5ecc816efb/artifacts
+end_time: 1738708989751
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f2b48d801d684a9783972e5ecc816efb
+run_name: beautiful-stork-931
+run_uuid: f2b48d801d684a9783972e5ecc816efb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738708989369
+status: 3
+tags: []
+user_id: root

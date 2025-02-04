@@ -10,7 +10,7 @@ default_args = {
 }
 
 with DAG(
-    dag_id='our_first_v5',
+    dag_id='our_first_v2',
     default_args=default_args,
     description="This is my first airflow dag",
     start_date=datetime(2025, 2, 3, 2),

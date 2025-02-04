@@ -1,0 +1,11 @@
+unstructured
+tiktoken
+pinecone-client
+pypdf
+openai
+langchain
+python-dotenv
+transformers
+mlflow
+faiss-cpu
+minio

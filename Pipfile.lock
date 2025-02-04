@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "df529dd0a9438767c695da8d45245c10e6da6d193cd70f1dc2c7b28bf57bd379"
+            "sha256": "09347c7e6bfc1e7523f0f5765156508aa02caca99307bf380ec444d705970fa5"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -649,11 +649,11 @@
         },
         "databricks-sdk": {
             "hashes": [
-                "sha256:a5f5ef01678c8d84942b21fe05a54d7056944edd3d9f2046a1ba29dd9917a38b",
-                "sha256:d0eb8807ef3ccd740486462226fb8eda5631077dffcd5e6602dad325eebf6d39"
+                "sha256:bd568220e741a82a54bdf464aed148b49b195aab3b7925588af5e6504c04928b",
+                "sha256:d477aabb44ef56e6b8ade5659dcaed854228e33794ea54efea54fb45f8f19b04"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==0.42.0"
+            "version": "==0.43.0"
         },
         "datasets": {
             "hashes": [
@@ -1313,6 +1313,14 @@
             "markers": "python_version >= '3.5'",
             "version": "==0.5.1"
         },
+        "iniconfig": {
+            "hashes": [
+                "sha256:2d91e135bf72d31a410b17c16da610a82cb55f6b0477d1a902134b24a455b8b3",
+                "sha256:b6a85871a79d2e3b22d2d1b94ac2824226a63c6b741c88f7ae975f18b6778374"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==2.0.0"
+        },
         "itsdangerous": {
             "hashes": [
                 "sha256:c6242fc49e35958c8b15141343aa660db5fc54d4f13a1db01a3f5891b98700ef",
@@ -1646,11 +1654,11 @@
         },
         "mako": {
             "hashes": [
-                "sha256:42f48953c7eb91332040ff567eb7eea69b22e7a4affbc5ba8e845e8f730f6627",
-                "sha256:577b97e414580d3e088d47c2dbbe9594aa7a5146ed2875d4dfa9075af2dd3cc8"
+                "sha256:95920acccb578427a9aa38e37a186b1e43156c87260d7ba18ca63aa4c7cbd3a1",
+                "sha256:b5d65ff3462870feec922dbccf38f6efb44e5714d7b593a656be86663d8600ac"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==1.3.8"
+            "version": "==1.3.9"
         },
         "markdown": {
             "hashes": [
@@ -2021,7 +2029,7 @@
                 "sha256:e9e82dcb3f2ebbc8cb5ce1102d5f1c5ed236bf8a11730fb45ba82e2841ec21df",
                 "sha256:ed6906f61834d687738d25988ae117683705636936cc605be0bb208b23df4d8f"
             ],
-            "markers": "python_version >= '3.10'",
+            "markers": "python_version >= '3.12'",
             "version": "==2.2.2"
         },
         "openai": {
@@ -2806,6 +2814,15 @@
             "index": "pypi",
             "markers": "python_version >= '3.8'",
             "version": "==5.2.0"
+        },
+        "pytest": {
+            "hashes": [
+                "sha256:50e16d954148559c9a74109af1eaf0c945ba2d8f30f0a3d3335edde19788b6f6",
+                "sha256:965370d062bce11e73868e0335abac31b4d3de0e82f4007408d242b4f8610761"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.8'",
+            "version": "==8.3.4"
         },
         "python-daemon": {
             "hashes": [
