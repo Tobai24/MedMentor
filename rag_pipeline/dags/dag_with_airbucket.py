@@ -1,32 +1,10 @@
-from minio import Minio
-from airflow.operators.python import PythonOperator
-from airflow import DAG
-from datetime import datetime
+from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 
-def download_book_from_minio(book_name):
-    client = Minio(
-        "localhost:9000",
-        access_key="minio",
-        secret_key="minio123",
-        secure=False
-    )
-    client.fget_object("books_bucket", book_name, f"/tmp/{book_name}")
-    print(f"Book {book_name} downloaded successfully.")
+MINIO_BUCKET = "books"
+MINIO_CONN_ID = "minio_conn"
 
-default_args = {
-    'owner': 'airflow',
-    'start_date': datetime(2025, 2, 3),
-    'retries': 1,
-}
-
-with DAG(
-    'book_pipeline',
-    default_args=default_args,
-    schedule_interval=None,
-) as dag:
-
-    download_book = PythonOperator(
-        task_id='download_book',
-        python_callable=download_book_from_minio,
-        op_args=['Handbook of Clinical Diagnostics by Xue-Hong Wan, Rui Zeng (z-lib.org).pdf'],
-    )
+def download_and_process_book(book_key):
+    hook = S3Hook(aws_conn_id=MINIO_CONN_ID)
+    book_content = hook.read_key(key=book_key, bucket_name=MINIO_BUCKET)
+    print(f"Processing book: {book_key}")
+    # Add your processing logic here

@@ -15,36 +15,32 @@ default_args = {
 
 # Function to log an experiment with MLflow
 def log_mlflow_experiment():
-    # Set the tracking URI
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 
-    # Start an MLflow run
     with mlflow.start_run():
-        # Log parameters
+
         mlflow.log_param("param1", 5)
         mlflow.log_param("param2", "hello")
 
-        # Log metrics
+
         mlflow.log_metric("accuracy", 0.95)
         mlflow.log_metric("loss", 0.05)
 
-        # Log artifacts (e.g., a text file)
         with open("output.txt", "w") as f:
             f.write("This is a test artifact.")
         mlflow.log_artifact("output.txt")
 
         print("Experiment logged successfully!")
 
-# Define the DAG
+
 with DAG(
-    dag_id="mlflow_integration_tired_v3",
+    dag_id="mlflow_integration_v3",
     default_args=default_args,
     start_date=datetime(2023, 10, 1),
     schedule_interval="@daily",
     catchup=False,
 ) as dag:
 
-    # Task to log an MLflow experiment
     log_experiment_task = PythonOperator(
         task_id="log_mlflow_experiment_v2",
         python_callable=log_mlflow_experiment,

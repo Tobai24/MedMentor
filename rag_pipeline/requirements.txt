@@ -8,4 +8,4 @@ python-dotenv
 transformers
 mlflow
 faiss-cpu
-minio
+apache-airflow-providers-amazon[minio]

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/1ee777ebc16f410ba6d52e0217f58992/artifacts
+end_time: 1738712983432
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1ee777ebc16f410ba6d52e0217f58992
+run_name: intrigued-loon-339
+run_uuid: 1ee777ebc16f410ba6d52e0217f58992
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738712983175
+status: 3
+tags: []
+user_id: root
