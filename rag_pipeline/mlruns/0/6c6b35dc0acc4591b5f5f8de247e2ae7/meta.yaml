@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/6c6b35dc0acc4591b5f5f8de247e2ae7/artifacts
+end_time: 1738713613105
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6c6b35dc0acc4591b5f5f8de247e2ae7
+run_name: mysterious-horse-267
+run_uuid: 6c6b35dc0acc4591b5f5f8de247e2ae7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738713612527
+status: 3
+tags: []
+user_id: root

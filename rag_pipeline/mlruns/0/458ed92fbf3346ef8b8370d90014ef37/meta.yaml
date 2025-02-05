@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/458ed92fbf3346ef8b8370d90014ef37/artifacts
+end_time: 1738713619628
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 458ed92fbf3346ef8b8370d90014ef37
+run_name: popular-fly-710
+run_uuid: 458ed92fbf3346ef8b8370d90014ef37
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738713619401
+status: 3
+tags: []
+user_id: root
