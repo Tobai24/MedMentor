@@ -7,7 +7,7 @@ def hello():
     return "Hello, Airflow!"
 
 with DAG(
-    "tell",
+    "tiredly",
     start_date=datetime(2025, 2, 7),
     schedule_interval=None,
     catchup=False,
