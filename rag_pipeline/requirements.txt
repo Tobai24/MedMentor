@@ -8,4 +8,6 @@ python-dotenv
 transformers
 mlflow
 faiss-cpu
-apache-airflow-providers-amazon[minio]
+psycopg2-binary
+minio
+langchain-community
