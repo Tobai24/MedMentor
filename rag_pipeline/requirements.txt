@@ -11,3 +11,5 @@ faiss-cpu
 psycopg2-binary
 minio
 langchain-community
+torch
+torchvision

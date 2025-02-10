@@ -12,12 +12,15 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.document_loaders.pdf import PyPDFLoader
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from langchain.embeddings import OpenAIEmbeddings
+from transformers import AutoTokenizer, AutoModel
 
-# Set up logging
+
+
 logger = logging.getLogger('airflow')
 logger.setLevel(logging.DEBUG)
 
-# Initialize Minio client
+
 minio_client = Minio(
     "minio-new:9000",  
     access_key="minioadmin",  
@@ -25,10 +28,11 @@ minio_client = Minio(
     secure=False
 )
 
-# Set MLflow tracking URI
+
 MLFLOW_TRACKING_URI =  "http://mlflow:5000"
 mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
 mlflow.set_experiment("Minio_Document_Processing")
+
 
 
 def read_split_doc_from_mino(bucket_name: str, chunk_size: int = 500, chunk_overlap: int = 120) -> list[str]:
@@ -47,7 +51,7 @@ def read_split_doc_from_mino(bucket_name: str, chunk_size: int = 500, chunk_over
             # Write the file to a temporary location
             with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp_file:
                 tmp_file.write(pdf_content)
-                tmp_file_path = tmp_file.name  # Store the file path
+                tmp_file_path = tmp_file.name
             
             # Load PDF using PyPDFLoader
             pdf_loader = PyPDFLoader(tmp_file_path)
