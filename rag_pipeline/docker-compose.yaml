@@ -18,6 +18,10 @@ x-airflow-common: &airflow-common
     AIRFLOW__LOGGING__REMOTE_LOG_CONN_ID: ""
     AIRFLOW__LOGGING__ENABLE_PICKLING: "False"
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
+    # Add AWS credentials for MinIO access
+    AWS_ACCESS_KEY_ID: minioadmin
+    AWS_SECRET_ACCESS_KEY: minioadmin
+    AWS_DEFAULT_REGION: us-east-1
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
@@ -170,12 +174,15 @@ services:
       MLFLOW_S3_ENDPOINT_URL: http://minio:9000
       AWS_ACCESS_KEY_ID: minioadmin
       AWS_SECRET_ACCESS_KEY: minioadmin
+      AWS_DEFAULT_REGION: us-east-1
     command: >
       mlflow server
-      --backend-store-uri sqlite:///mlflow.db
+      --backend-store-uri sqlite:///mlflow/mlflow.db
       --default-artifact-root s3://mlflow/artifacts
       --host 0.0.0.0
       --port 5000
+    volumes:
+      - mlflow-data:/mlflow
     depends_on:
       postgres:
         condition: service_healthy
@@ -202,3 +209,4 @@ volumes:
   postgres-db-volume:
   minio-data:
   grafana-storage:
+  mlflow-data:

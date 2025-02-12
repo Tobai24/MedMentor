@@ -136,23 +136,23 @@ def generate_and_track_embeddings(bucket_name: str, file_name: str):
             openai_library.save_local("/opt/airflow/embeddings/openai_faiss_index")
 
             # Generate ClinicalBERT embeddings
-            logger.info("Generating ClinicalBERT embeddings")
-            tokenizer = AutoTokenizer.from_pretrained("medicalai/ClinicalBERT")
-            model = AutoModel.from_pretrained("medicalai/ClinicalBERT")
+            # logger.info("Generating ClinicalBERT embeddings")
+            # tokenizer = AutoTokenizer.from_pretrained("medicalai/ClinicalBERT")
+            # model = AutoModel.from_pretrained("medicalai/ClinicalBERT")
 
-            clinicalbert_embeddings = []
-            for doc in chunked_docs:
-                inputs = tokenizer(doc["text"], return_tensors="pt", truncation=True, padding=True)
-                outputs = model(**inputs)
-                embedding = outputs.last_hidden_state.mean(dim=1).detach().numpy()
-                clinicalbert_embeddings.append(embedding)
+            # clinicalbert_embeddings = []
+            # for doc in chunked_docs:
+            #     inputs = tokenizer(doc["text"], return_tensors="pt", truncation=True, padding=True)
+            #     outputs = model(**inputs)
+            #     embedding = outputs.last_hidden_state.mean(dim=1).detach().numpy()
+            #     clinicalbert_embeddings.append(embedding)
 
-            clinicalbert_embeddings = np.array(clinicalbert_embeddings)
-            np.save("/opt/airflow/embeddings/clinicalbert_embeddings.npy", clinicalbert_embeddings)
+            # clinicalbert_embeddings = np.array(clinicalbert_embeddings)
+            # np.save("/opt/airflow/embeddings/clinicalbert_embeddings.npy", clinicalbert_embeddings)
 
             # Log embeddings as artifacts
             mlflow.log_artifact("/opt/airflow/embeddings/openai_faiss_index")
-            mlflow.log_artifact("/opt/airflow/embeddings/clinicalbert_embeddings.npy")
+            # mlflow.log_artifact("/opt/airflow/embeddings/clinicalbert_embeddings.npy")
 
             logger.info("Embeddings generated and tracked with MLflow.")
     
@@ -168,7 +168,7 @@ default_args = {
 }
 
 with DAG(
-    'processing_pipeline_v1',
+    'processing_pipeline_v02',
     default_args=default_args,
     description='A DAG to read, split, and upload PDF chunks to Minio',
     schedule_interval=None,
