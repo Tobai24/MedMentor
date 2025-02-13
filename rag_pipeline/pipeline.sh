@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+# code to build and stop the docker image
 if [ "$1" == "stop" ]; then
     docker compose down
     echo "Docker Compose has been stopped!"
