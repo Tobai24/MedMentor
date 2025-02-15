@@ -169,3 +169,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+# Ignore FAISS index files
+embeddings/faiss_index_*/
