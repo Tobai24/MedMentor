@@ -10,11 +10,10 @@ function Chat() {
     const userMessage = { role: "user", text: input };
     setMessages([...messages, userMessage]);
 
-    // Simulate AI response
     setTimeout(() => {
       const botMessage = {
         role: "bot",
-        text: "This is a simulated AI response. In a real app, integrate with a backend.",
+        text: "Coming soon",
       };
       setMessages((prev) => [...prev, botMessage]);
     }, 1000);

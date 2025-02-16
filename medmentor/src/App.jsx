@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import MainApp from "./pages/MainApp";
+import Scenario from "./components/Scenario";
+import Chat from "./components/Chat";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/app" element={<MainApp />} />
+        <Route path="/scenario" element={<Scenario />} />
+        <Route path="/app/chatbot" element={<Chat />} />
       </Routes>
     </Router>
   );

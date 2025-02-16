@@ -6,7 +6,7 @@ function Home() {
     <div className="home">
       <h1>Welcome to MedMentor</h1>
       <p>Your AI-powered study companion for OSCE exams.</p>
-      <Link to="/app">
+      <Link to="/scenario">
         <button>Start Practicing</button>
       </Link>
     </div>
