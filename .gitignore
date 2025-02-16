@@ -171,3 +171,4 @@ cython_debug/
 .pypirc
 # Ignore FAISS index files
 embeddings/faiss_index_*/
+node_modules/
