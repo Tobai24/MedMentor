@@ -13,7 +13,7 @@ function Chat() {
     setTimeout(() => {
       const botMessage = {
         role: "bot",
-        text: "Coming soon",
+        text: "Doctor, I've been feeling very dizzy and tired lately.",
       };
       setMessages((prev) => [...prev, botMessage]);
     }, 1000);

@@ -172,3 +172,4 @@ cython_debug/
 # Ignore FAISS index files
 embeddings/faiss_index_*/
 node_modules/
+notebook/embeddings/
