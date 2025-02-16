@@ -272,7 +272,7 @@ input:active {
 .instructions {
   background: #fdfdfd;
   padding: 20px;
-  border-left: 5px solid #ff9800;
+  border-left: 5px solid #2980b9;
   border-radius: 8px;
   margin-bottom: 1.5rem;
   width: 100%;
@@ -344,12 +344,12 @@ input:active {
 
 .scenario-content ul li::before {
   margin-right: 12px;
-  color: #e67e22;
+  color: #2980b9;
   font-size: 1.4rem;
 }
 
 .tasks {
-  background: #dfe6e9;
+  background: white;
   border-left: 5px solid #2980b9;
   padding: 20px;
   border-radius: 8px;
@@ -365,7 +365,7 @@ input:active {
 }
 
 .tasks h3 {
-  color: #2980b9;
+  color: black;
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -378,8 +378,8 @@ input:active {
   margin-top: 25px;
   font-size: 1.2rem;
   font-weight: bold;
-  color: white;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: black;
+  background: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;

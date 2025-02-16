@@ -8,14 +8,8 @@ function Scenario() {
       instructions:
         "You are a final-year medical student in an OSCE examination. You are about to see a simulated patient in a clinical station. Read the scenario below carefully before proceeding.",
       stationTitle: "Respiratory OSCE Station - Chronic Cough",
-      patient: {
-        name: "John Edwards",
-        age: 55,
-        gender: "Male",
-        occupation: "Retired mechanic",
-      },
-      complaint:
-        "I have been having trouble breathing and a cough that won't go away.",
+      casePrompt:
+        "John Edwards, a 55-year-old retired mechanic, presents with persistent cough and breathlessness. He has a history of COPD and a significant smoking history. Assess his condition and formulate an appropriate management plan.",
       background: {
         medicalHistory: [
           "Chronic Obstructive Pulmonary Disease (COPD) for 5 years",
@@ -36,16 +30,10 @@ function Scenario() {
     },
     {
       instructions:
-        "You are a final-year medical student in an OSCE examination. You are about to see a simulated patient in a clinical station. Read the scenario below carefully before proceeding.",
+        "You are a medical student in an OSCE examination. You are about to see a simulated patient in a clinical station. Read the scenario below carefully before proceeding.",
       stationTitle: "Neurology OSCE Station - Altered Mental Status",
-      patient: {
-        name: "James Carter",
-        age: 70,
-        gender: "Male",
-        occupation: "Retired teacher",
-      },
-      complaint:
-        "I feel confused sometimes, and my daughter says I've been acting differently.",
+      casePrompt:
+        "James Carter, a 70-year-old retired teacher, is brought in by his daughter due to increasing confusion and behavioral changes. Assess his condition and outline a management plan.",
       background: {
         medicalHistory: [
           "Type 2 Diabetes (10 years)",
@@ -66,7 +54,7 @@ function Scenario() {
     },
   ];
 
-  const [scenario, setScenario] = useState(
+  const [scenario] = useState(
     scenarios[Math.floor(Math.random() * scenarios.length)]
   );
 
@@ -86,24 +74,8 @@ function Scenario() {
       </div>
 
       <div className="scenario-content">
-        <h3>👤 Patient Details</h3>
-        <ul>
-          <li>
-            <strong>Name:</strong> {scenario.patient.name}
-          </li>
-          <li>
-            <strong>Age:</strong> {scenario.patient.age}
-          </li>
-          <li>
-            <strong>Gender:</strong> {scenario.patient.gender}
-          </li>
-          <li>
-            <strong>Occupation:</strong> {scenario.patient.occupation}
-          </li>
-        </ul>
-
-        <h3>🩹 Presenting Complaint</h3>
-        <p>💬 "{scenario.complaint}"</p>
+        <h3>📝 Case Prompt</h3>
+        <p>{scenario.casePrompt}</p>
 
         <button
           className="hint-btn"
