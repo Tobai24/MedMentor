@@ -205,6 +205,33 @@ services:
       - postgres
     restart: always
 
+  # FastAPI Service
+  fastapi:
+    image: tiangolo/uvicorn-gunicorn-fastapi:latest
+    container_name: fastapi
+    environment:
+      - FASTAPI_ENV=production
+    ports:
+      - "8000:80"
+    volumes:
+      - ../backend/api/main:/app
+    restart: always
+
+  vite:
+    image: node:latest
+    container_name: vite
+    working_dir: /app
+    environment:
+      - VITE_ENV=production
+    ports:
+      - "3001:3000"
+    command: sh -c "npm install && npm run dev"
+    volumes:
+      - ../medmentor:/app
+    restart: always
+    depends_on:
+      - fastapi
+
 volumes:
   postgres-db-volume:
   minio-data:
