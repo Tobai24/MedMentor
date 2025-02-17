@@ -428,6 +428,176 @@ input:active {
   margin-bottom: 10px;
 }
 
+.mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+
+.mode button {
+  padding: 5rem;
+  width: 30%;
+}
+
+.next-mode {
+  display: flex;
+  margin: 3rem;
+  padding: 2rem;
+  justify-content: flex-end;
+}
+
+select {
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  height: 4rem;
+  min-width: 10rem;
+  color: white;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "LXGW WenKai TC", serif;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  appearance: none; /* Removes default styling on most browsers */
+}
+
+select:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+select:active {
+  transform: scale(0.98);
+}
+
+option {
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: "LXGW WenKai TC", serif;
+  border-radius: 8px;
+}
+
+.system {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+
+.system button {
+  padding: 5rem;
+  width: 30%;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  font-size: 1.2rem;
+  font-family: "LXGW WenKai TC", serif;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.system button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+.system button:active {
+  transform: scale(0.98);
+}
+
+.select-body-system {
+  padding: 2rem;
+}
+
+.select-body-system {
+  padding: 2rem;
+}
+
+.select-body-system {
+  padding: 2rem;
+}
+
+.select-body-system {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.system {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 5rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.system-item {
+  padding: 5rem;
+  background: #2575fc;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "LXGW WenKai TC", serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.system-item:hover {
+  background: #6a11cb;
+  transform: scale(1.05);
+}
+
+.system-item.selected {
+  background: #6a11cb;
+}
+
+.random-system {
+  padding: 1rem 2rem;
+  background: #2575fc;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "LXGW WenKai TC", serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-body-system h1 {
+  font-size: 3rem;
+  font-size: bold;
+  margin-bottom: 1rem;
+}
+
+.select-body-system h2 {
+  font-size: 1.5rem;
+  font-size: bold;
+  font-style: italic;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
