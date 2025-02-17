@@ -18,6 +18,7 @@ apache-airflow = "==2.10.4"
 pytest = "*"
 google-generativeai = "*"
 sentence-transformers = "==2.7.0"
+rank-bm25 = "*"
 
 [dev-packages]
 ipykernel = "*"
