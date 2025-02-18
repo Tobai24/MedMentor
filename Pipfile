@@ -19,6 +19,8 @@ pytest = "*"
 google-generativeai = "*"
 sentence-transformers = "==2.7.0"
 rank-bm25 = "*"
+fastapi = "*"
+uvicorn = "*"
 
 [dev-packages]
 ipykernel = "*"
