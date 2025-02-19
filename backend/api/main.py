@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from .case import router
 from . import models
 from .database import engine
 
@@ -18,4 +18,5 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(router)
 

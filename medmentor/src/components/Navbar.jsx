@@ -9,9 +9,6 @@ function Navbar() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/scenario">Scenario</Link>
-        </li>
-        <li>
           <Link to="/app/chatbot">Chat</Link>
         </li>
       </ul>

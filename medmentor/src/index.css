@@ -258,9 +258,9 @@ input:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 70vh;
   width: 100%;
-  max-width: 900px; /* Ensures a uniform width */
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
   background: rgba(255, 255, 255, 0.3);
@@ -269,27 +269,8 @@ input:active {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.instructions {
-  background: #fdfdfd;
-  padding: 20px;
-  border-left: 5px solid #2980b9;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-  width: 100%;
-  max-width: 800px;
-  text-align: left;
-  font-size: 3rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.instructions p {
-  color: #444;
-  line-height: 1.6;
-  font-size: 1rem;
-}
-
 .station-details h3 {
-  color: #d35400;
+  color: linear-gradient(135deg, #6a11cb, #2575fc);
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -320,6 +301,22 @@ input:active {
   margin-top: 15px;
 }
 
+.input-section h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.input-section input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .scenario-content ul li {
   font-size: 1rem;
   color: #333;
@@ -346,31 +343,6 @@ input:active {
   margin-right: 12px;
   color: #2980b9;
   font-size: 1.4rem;
-}
-
-.tasks {
-  background: white;
-  border-left: 5px solid #2980b9;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-  width: 100%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  font-size: 1rem;
-}
-
-.tasks h3 {
-  color: black;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
-  margin-bottom: 15px;
 }
 
 .proceed-btn {
@@ -518,22 +490,38 @@ option {
 
 .select-body-system {
   padding: 2rem;
-}
-
-.select-body-system {
-  padding: 2rem;
-}
-
-.select-body-system {
-  padding: 2rem;
-}
-
-.select-body-system {
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.select-body-system p {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.select-body-system input {
+  padding: 4rem;
+  margin: 5rem;
+  font-size: 1.2rem;
+  font-family: "LXGW WenKai TC", serif;
+  width: 50%;
+  font-size: 2rem;
+}
+
+.select-body-system input::placeholder {
+  color: black;
+  font-size: 1.2rem;
+  text-align: center;
+  font-size: bold;
+}
+
+.button-group {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .system {
