@@ -9,7 +9,8 @@
 body {
   font-family: "LXGW WenKai TC", serif;
   text-align: center;
-  background: #dfe6e9;
+  /* background: #dfe6e9; */
+  background: white;
   height: 92vh;
 }
 

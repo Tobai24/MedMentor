@@ -11,7 +11,7 @@ function Scenario() {
 
   useEffect(() => {
     if (!medicalQuestion || !generatedCase) {
-      navigate("/"); // Using navigate instead of window.location for better routing
+      navigate("/");
     }
   }, [medicalQuestion, generatedCase, navigate]);
 
@@ -27,16 +27,16 @@ function Scenario() {
       <div className="scenario-content">
         <h3>📝 Case Prompt</h3>
         <p>{generatedCase}</p>
-
         <div className="input-section">
-          <h3>Enter Differential Diagnoses</h3>
+          <h3>Enter Your Initial Diagnosis</h3>
+          <p className="text-gray-600">
+            Based on the case prompt, enter a diagnosis you think it might be.
+            As you gather more information from the patient, you can modify or
+            refine your diagnosis.
+          </p>
           <input
             type="text"
-            placeholder={
-              mode === "history"
-                ? "Enter history questions..."
-                : "Enter possible diagnoses..."
-            }
+            placeholder="Enter your initial diagnosis..."
             value={differentialDiagnosis}
             onChange={(e) => setDifferentialDiagnosis(e.target.value)}
           />
@@ -44,7 +44,7 @@ function Scenario() {
       </div>
 
       <div className="button-group">
-        <button onClick={() => navigate("/practice")}>Practice</button>
+        <button onClick={() => navigate("/app/chatbot")}>Practice</button>
       </div>
     </div>
   );
