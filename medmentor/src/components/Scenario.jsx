@@ -29,7 +29,12 @@ function Scenario() {
         <p>{generatedCase}</p>
 
         <div className="input-section">
-          <h3>Enter Differential Diagnoses</h3>
+          <h3>Enter Your Initial Diagnosis</h3>
+          <p className="text-gray-600">
+            Based on the case prompt, enter a diagnosis you think it might be.
+            As you gather more information from the patient, you can modify or
+            refine your diagnosis.
+          </p>
           <input
             type="text"
             placeholder={
@@ -44,7 +49,7 @@ function Scenario() {
       </div>
 
       <div className="button-group">
-        <button onClick={() => navigate("/practice")}>Practice</button>
+        <button onClick={() => navigate("/app/chatbot")}>Practice</button>
       </div>
     </div>
   );
