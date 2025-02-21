@@ -11,7 +11,7 @@ function Scenario() {
 
   useEffect(() => {
     if (!medicalQuestion || !generatedCase) {
-      navigate("/"); // Using navigate instead of window.location for better routing
+      navigate("/");
     }
   }, [medicalQuestion, generatedCase, navigate]);
 
@@ -27,7 +27,6 @@ function Scenario() {
       <div className="scenario-content">
         <h3>📝 Case Prompt</h3>
         <p>{generatedCase}</p>
-
         <div className="input-section">
           <h3>Enter Your Initial Diagnosis</h3>
           <p className="text-gray-600">
@@ -37,11 +36,7 @@ function Scenario() {
           </p>
           <input
             type="text"
-            placeholder={
-              mode === "history"
-                ? "Enter history questions..."
-                : "Enter possible diagnoses..."
-            }
+            placeholder="Enter your initial diagnosis..."
             value={differentialDiagnosis}
             onChange={(e) => setDifferentialDiagnosis(e.target.value)}
           />
