@@ -5,6 +5,7 @@ import SelectBodySystem from "./pages/SelectBodySystem";
 import Scenario from "./components/Scenario";
 import Chat from "./components/Chat";
 import Navbar from "./components/Navbar";
+import Complete from "./components/Complete";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/app/chatbot" element={<Chat />} />
         <Route path="/practice" element={<PracticeMode />} />
         <Route path="/practice/:mode" element={<SelectBodySystem />} />
+        <Route path="/complete" element={<Complete />} />{" "}
       </Routes>
     </Router>
   );
